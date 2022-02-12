@@ -5,9 +5,11 @@ import datetime
 import reports
 import emails
 
+# Gets current date
 date = datetime.datetime.now().strftime('%Y-%m-%d')
 
 def process_text(path):
+    # Iterates over files in directory and formats text
     processed = ""
     for file in os.listdir(path):
         if file.endswith(".txt"):
@@ -20,12 +22,14 @@ def process_text(path):
 
 
 if __name__ == "__main__":
+    # Generates PDF from formatted text
     path = 'supplier-data/descriptions/'
     attach = "/tmp/processed.pdf"
     title = "Process Updated on " + date
     body = process_text(path)
     reports.generate_report(attach, title, body)
 
+    # Sends email with PDF attachment
     sender = "automation@example.com"
     recipient = "{}@example.com".format(os.environ["USER"])
     subject = "Upload Completed - Online Fruit Store"

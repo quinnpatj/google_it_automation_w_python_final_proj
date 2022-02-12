@@ -9,6 +9,7 @@ def main():
     ip = 'localhost'
     url = 'http://{}/fruits/'.format(ip)
 
+    # Iterates over files in directory and uploads data to URL
     for file in files:
         if file.endswith("txt"):
             dict = {}

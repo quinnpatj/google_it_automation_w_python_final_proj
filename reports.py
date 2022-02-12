@@ -5,6 +5,7 @@ from reportlab.platypus import Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 
 def generate_report(attach, title, body):
+    # Generates PDF from text formatted in report_email.py
     report = SimpleDocTemplate(attach)
     styles = getSampleStyleSheet
     report_title = Paragraph(title, styles["h1"])
