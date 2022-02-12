@@ -2,3 +2,25 @@
 
 import os
 import requests
+
+def main():
+    path = 'supplier-data/descriptions/'
+    files = os.listdir(path)
+    ip = 'localhost'
+    url = 'http://{}/fruits/'.format(ip)
+
+    for file in files:
+        if file.endswith("txt"):
+            dict = {}
+            fruit_name = file.split('.')[0]
+            f = open(path + file)
+            val = f.readlines()
+            dict['name'] = val[0]
+            dict['weight'] = int(val[1].strip(" lbs"))
+            dict['description'] = val[2]
+            dict['image_name'] = fruit_name + ".jpeg"
+
+            response = requests.post(url, json=dict)
+
+if __name__ == '__main__':
+    main()

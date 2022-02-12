@@ -9,8 +9,8 @@ def main():
 
     for file in os.listdir(path):
         if file.endswith(".jpeg"):
-            with open(path + file, 'rb') as im:
-                r = requests.post(url, files={'file': im})
+            im = open(path + file, 'rb')
+            r = requests.post(url, files={'file': im})
 
 if __name__ == '__main__':
     main()
