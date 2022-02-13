@@ -17,9 +17,8 @@ def process_text(path):
             val = f.readlines()
             name = val[0]
             weight = val[1]
-            processed += "name: " + name + "<br/>" + "weight: " + weight + "<br/>"
+            processed += "name: " + name + "<br/>" + "weight: " + weight + "<br/><br/>"
     return processed
-
 
 if __name__ == "__main__":
     # Generates PDF from formatted text

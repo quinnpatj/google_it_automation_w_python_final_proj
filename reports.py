@@ -7,7 +7,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 def generate_report(attach, title, body):
     # Generates PDF from text formatted in report_email.py
     report = SimpleDocTemplate(attach)
-    styles = getSampleStyleSheet
+    styles = getSampleStyleSheet()
     report_title = Paragraph(title, styles["h1"])
     report_body = Paragraph(body, styles["BodyText"])
     br = Spacer(1,20)

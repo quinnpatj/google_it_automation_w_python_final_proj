@@ -17,7 +17,8 @@ def main():
             f = open(path + file)
             val = f.readlines()
             dict['name'] = val[0]
-            dict['weight'] = int(val[1].strip(" lbs"))
+            weight = val[1].split(" ")
+            dict['weight'] = int(weight[0])
             dict['description'] = val[2]
             dict['image_name'] = fruit_name + ".jpeg"
 
