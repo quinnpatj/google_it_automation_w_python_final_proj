@@ -1,8 +1,8 @@
 # Google IT Automation with Python - Final Project
-Final project for the "Google IT Automation with Python" certification
+Final project for the Google IT Automation with Python Professional Certificate - Issued Feb 2022
 
-Google IT Automation with Python Professional Certificate - Issued Feb 2022
 Credential ID: 8Z9E26RB3Y3S
+
 https://www.coursera.org/account/accomplishments/specialization/certificate/8Z9E26RB3Y3S
 
 # Project Description:
